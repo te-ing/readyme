@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm build:*)",
+      "Bash(npx prisma init:*)",
+      "Bash(npx prisma generate)"
+    ],
+    "additionalDirectories": [
+      "/Users/te-ing/Desktop/workspace/readyme/server/src/{auth,users,common,prisma}"
+    ]
+  }
+}
