@@ -8,7 +8,8 @@
 
 - Next.js 15 (App Router)
 - TypeScript
-- Tailwind CSS
+- Tailwind CSS v4
+- shadcn/ui (Radix UI 기반)
 - Zustand
 - React Hook Form + Zod
 - TanStack Query
