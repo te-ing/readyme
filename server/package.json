@@ -34,7 +34,6 @@
     "rxjs": "^7.8.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.0.0",
     "@types/bcrypt": "^6.0.0",
     "@types/express": "^5.0.6",
     "@types/node": "^22.0.0",
@@ -42,11 +41,8 @@
     "@types/passport-local": "^1.0.38",
     "dotenv": "^17.2.3",
     "eslint": "^9.0.0",
-    "eslint-config-prettier": "^10.1.8",
-    "prettier": "^3.8.1",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.7.0",
-    "typescript-eslint": "^8.54.0"
+    "typescript": "^5.7.0"
   }
 }

@@ -18,7 +18,13 @@
     "clean": "pnpm -r exec rm -rf node_modules dist .next"
   },
   "devDependencies": {
-    "prettier": "^3.4.0"
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-unused-imports": "^4.1.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.8.1",
+    "typescript-eslint": "^8.54.0"
   },
   "engines": {
     "node": ">=20.0.0",
