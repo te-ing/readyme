@@ -3,7 +3,9 @@
     "allow": [
       "Bash(pnpm build:*)",
       "Bash(npx prisma init:*)",
-      "Bash(npx prisma generate)"
+      "Bash(npx prisma generate)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "additionalDirectories": [
       "/Users/te-ing/Desktop/workspace/readyme/server/src/{auth,users,common,prisma}"
