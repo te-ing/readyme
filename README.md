@@ -16,6 +16,7 @@ Readyme는 개발자와 구직자를 위한 이력서 관리 플랫폼입니다.
 ## 기술 스택
 
 ### Client
+
 - Next.js 15
 - TypeScript
 - Tailwind CSS
@@ -24,6 +25,7 @@ Readyme는 개발자와 구직자를 위한 이력서 관리 플랫폼입니다.
 - TanStack Query (서버 상태 관리)
 
 ### Server
+
 - NestJS
 - TypeScript
 - Prisma (ORM)
@@ -33,6 +35,7 @@ Readyme는 개발자와 구직자를 위한 이력서 관리 플랫폼입니다.
 - Swagger (API 문서화)
 
 ### Infrastructure
+
 - Docker
 - pnpm
 

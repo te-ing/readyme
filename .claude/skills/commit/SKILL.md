@@ -33,7 +33,6 @@ type(scope): summary
 - 변경 사항 1
 - 변경 사항 2
 
-
 - summary는 50자 이내, 마침표 사용하지 않음
 - 본문은 제목과 한 줄 띄우고 bullet point로 작성
 

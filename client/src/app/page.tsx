@@ -8,8 +8,8 @@ export default function HomePage() {
           쉽고 빠르게
         </h1>
         <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-          Readyme에서 이력서를 작성하고, 전문가의 피드백을 받아보세요. 더 나은
-          커리어를 위한 첫 걸음을 시작하세요.
+          Readyme에서 이력서를 작성하고, 전문가의 피드백을 받아보세요. 더 나은 커리어를 위한 첫
+          걸음을 시작하세요.
         </p>
         <div className="mt-10 flex justify-center gap-4">
           <a

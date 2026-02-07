@@ -44,5 +44,5 @@ export default tseslint.config(
   },
   {
     ignores: ['.next/**', 'out/**', 'node_modules/**'],
-  },
+  }
 );

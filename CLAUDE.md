@@ -93,15 +93,15 @@ pnpm dev:server       # server만 (localhost:3001)
 
 ### 네이밍
 
-| 대상 | 규칙 | 예시 |
-| --- | --- | --- |
-| 파일/폴더 | kebab-case | `auth-guard.ts`, `query-provider.tsx` |
-| 컴포넌트 파일 | PascalCase | `QueryProvider.tsx` |
-| 변수/함수 | camelCase | `getUserById` |
-| 타입/인터페이스 | PascalCase | `LoginDto`, `UserResponse` |
-| 상수 | UPPER_SNAKE_CASE | `MAX_RETRY_COUNT` |
-| DB 컬럼 | snake_case (Prisma `@map`) | `created_at` |
-| DB 테이블 | snake_case 복수형 (Prisma `@@map`) | `users` |
+| 대상            | 규칙                               | 예시                                  |
+| --------------- | ---------------------------------- | ------------------------------------- |
+| 파일/폴더       | kebab-case                         | `auth-guard.ts`, `query-provider.tsx` |
+| 컴포넌트 파일   | PascalCase                         | `QueryProvider.tsx`                   |
+| 변수/함수       | camelCase                          | `getUserById`                         |
+| 타입/인터페이스 | PascalCase                         | `LoginDto`, `UserResponse`            |
+| 상수            | UPPER_SNAKE_CASE                   | `MAX_RETRY_COUNT`                     |
+| DB 컬럼         | snake_case (Prisma `@map`)         | `created_at`                          |
+| DB 테이블       | snake_case 복수형 (Prisma `@@map`) | `users`                               |
 
 ### import 순서
 
@@ -111,12 +111,12 @@ pnpm dev:server       # server만 (localhost:3001)
 
 ## 브랜치 전략
 
-| 브랜치 | 용도 |
-| --- | --- |
-| `main` | 배포 가능 상태 |
-| `develop` | 개발 통합 브랜치 |
-| `feat/{기능명}` | 기능 개발 |
-| `fix/{버그명}` | 버그 수정 |
+| 브랜치           | 용도                |
+| ---------------- | ------------------- |
+| `main`           | 배포 가능 상태      |
+| `develop`        | 개발 통합 브랜치    |
+| `feat/{기능명}`  | 기능 개발           |
+| `fix/{버그명}`   | 버그 수정           |
 | `chore/{작업명}` | 설정/빌드/패키지 등 |
 
 - `feat`, `fix`, `chore` → `develop`으로 PR

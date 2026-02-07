@@ -13,7 +13,7 @@ export interface JwtPayload {
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(
     private configService: ConfigService,
-    private usersService: UsersService,
+    private usersService: UsersService
   ) {
     const secret = configService.get<string>('JWT_SECRET');
     if (!secret) {
