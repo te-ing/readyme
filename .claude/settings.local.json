@@ -5,7 +5,21 @@
       "Bash(npx prisma init:*)",
       "Bash(npx prisma generate)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(ls:*)",
+      "Bash(node -e:*)",
+      "WebSearch",
+      "Bash(pnpm dlx shadcn@latest init:*)",
+      "Bash(pnpm dlx:*)",
+      "Bash(pnpm remove:*)",
+      "Bash(curl -s http://localhost:3001)",
+      "Bash(pnpm lint:server:*)",
+      "Bash(curl:*)",
+      "Bash(pnpm lint:client:*)",
+      "Bash(pnpm format:check:*)",
+      "Bash(pnpm format:*)",
+      "Bash(pnpm lint:*)",
+      "Bash(git reset:*)"
     ],
     "additionalDirectories": [
       "/Users/te-ing/Desktop/workspace/readyme/server/src/{auth,users,common,prisma}"
