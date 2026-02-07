@@ -1,9 +1,8 @@
-import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 import { QueryProvider } from '@/providers/QueryProvider';
 import './globals.css';
-import { Noto_Sans } from 'next/font/google';
-
-const notoSans = Noto_Sans({ variable: '--font-sans' });
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Readyme - 이력서 플랫폼',
@@ -16,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={notoSans.variable}>
+    <html lang="ko">
       <body className="antialiased">
         <QueryProvider>
           <div className="min-h-screen flex flex-col">
@@ -24,15 +23,12 @@ export default function RootLayout({
               <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                 <div className="font-bold text-xl text-primary-600">Readyme</div>
                 <div className="flex items-center gap-4">
-                  <a href="/login" className="text-gray-600 hover:text-gray-900">
-                    로그인
-                  </a>
-                  <a
-                    href="/register"
-                    className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700"
-                  >
-                    회원가입
-                  </a>
+                  <Button variant="ghost" asChild>
+                    <Link href="/login">로그인</Link>
+                  </Button>
+                  <Button asChild>
+                    <Link href="/register">회원가입</Link>
+                  </Button>
                 </div>
               </nav>
             </header>

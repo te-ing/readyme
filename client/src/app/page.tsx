@@ -1,9 +1,12 @@
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+
 export default function HomePage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
-          나만의 <span className="text-primary-600">이력서</span>를
+          나만의 <span className="text-primary">이력서</span>를
           <br />
           쉽고 빠르게
         </h1>
@@ -12,18 +15,12 @@ export default function HomePage() {
           걸음을 시작하세요.
         </p>
         <div className="mt-10 flex justify-center gap-4">
-          <a
-            href="/register"
-            className="bg-primary-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-700 transition"
-          >
-            시작하기
-          </a>
-          <a
-            href="/explore"
-            className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition"
-          >
-            둘러보기
-          </a>
+          <Button size="lg" asChild>
+            <Link href="/register">시작하기</Link>
+          </Button>
+          <Button variant="outline" size="lg" asChild>
+            <Link href="/explore">둘러보기</Link>
+          </Button>
         </div>
       </div>
     </div>
