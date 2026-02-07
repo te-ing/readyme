@@ -12,14 +12,13 @@ async function bootstrap() {
       whitelist: true,
       forbidNonWhitelisted: true,
       transform: true,
-    }),
+    })
   );
 
   // CORS
   app.enableCors({
-    origin: process.env.NODE_ENV === 'production'
-      ? ['https://readyme.com']
-      : ['http://localhost:3000'],
+    origin:
+      process.env.NODE_ENV === 'production' ? ['https://readyme.com'] : ['http://localhost:3000'],
     credentials: true,
   });
 
@@ -38,4 +37,4 @@ async function bootstrap() {
   console.log(`Server is running on http://localhost:${port}`);
   console.log(`Swagger docs: http://localhost:${port}/api-docs`);
 }
-bootstrap();
+void bootstrap();

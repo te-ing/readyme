@@ -8,7 +8,7 @@ import { RegisterDto } from './dto/register.dto';
 export class AuthService {
   constructor(
     private usersService: UsersService,
-    private jwtService: JwtService,
+    private jwtService: JwtService
   ) {}
 
   async validateUser(email: string, password: string) {
@@ -20,7 +20,7 @@ export class AuthService {
     return null;
   }
 
-  async login(user: { id: string; email: string }) {
+  login(user: { id: string; email: string }) {
     const payload = { sub: user.id, email: user.email };
     return {
       accessToken: this.jwtService.sign(payload),
