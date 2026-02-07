@@ -1,23 +1,18 @@
-import {
-  Controller,
-  Post,
-  Body,
-  UseGuards,
-  Request,
-  Get,
-} from '@nestjs/common';
-import {
-  ApiTags,
-  ApiOperation,
-  ApiResponse,
-  ApiBearerAuth,
-} from '@nestjs/swagger';
+import { Controller, Post, Body, UseGuards, Request, Get } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth } from '@nestjs/swagger';
+import { type Request as ExpressRequest } from 'express';
 import { AuthService } from './auth.service';
 import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
 import { LocalAuthGuard } from './guards/local-auth.guard';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 import { CurrentUser } from './decorators/current-user.decorator';
+
+interface AuthenticatedUser {
+  id: string;
+  email: string;
+  name?: string | null;
+}
 
 @ApiTags('auth')
 @Controller('auth')
@@ -37,7 +32,7 @@ export class AuthController {
   @ApiOperation({ summary: '로그인' })
   @ApiResponse({ status: 200, description: '로그인 성공' })
   @ApiResponse({ status: 401, description: '인증 실패' })
-  async login(@Body() _loginDto: LoginDto, @Request() req: any) {
+  login(@Body() _loginDto: LoginDto, @Request() req: ExpressRequest & { user: AuthenticatedUser }) {
     return this.authService.login(req.user);
   }
 
@@ -47,7 +42,7 @@ export class AuthController {
   @ApiOperation({ summary: '현재 사용자 정보 조회' })
   @ApiResponse({ status: 200, description: '사용자 정보' })
   @ApiResponse({ status: 401, description: '인증 필요' })
-  async getMe(@CurrentUser() user: any) {
+  getMe(@CurrentUser() user: AuthenticatedUser) {
     return user;
   }
 }
