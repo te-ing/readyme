@@ -5,14 +5,14 @@ export default function HomePage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
-          나만의 <span className="text-primary">이력서</span>를
+        <h1 className="text-4xl font-bold text-foreground sm:text-5xl md:text-6xl">
+          이력서를 <span className="text-primary-600">작성</span>하고
           <br />
-          쉽고 빠르게
+          <span className="text-primary-400">피드백</span>을 받아보세요
         </h1>
-        <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-          Readyme에서 이력서를 작성하고, 전문가의 피드백을 받아보세요. 더 나은 커리어를 위한 첫
-          걸음을 시작하세요.
+        <p className="mt-6 text-lg text-foreground/70 max-w-2xl mx-auto">
+          Readyme에서 이력서를 작성하고 공유하세요. 전문가의 피드백으로 더 나은 커리어를 만들어
+          보세요.
         </p>
         <div className="mt-10 flex justify-center gap-4">
           <Button size="lg" asChild>
