@@ -19,6 +19,9 @@ out
 *.swp
 *.swo
 
+# claude
+.claude/settings.local.json
+
 # os
 .DS_Store
 Thumbs.db
