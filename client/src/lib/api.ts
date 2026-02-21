@@ -1,3 +1,5 @@
+import { useAuthStore } from '@/stores/useAuthStore';
+
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
 interface RequestOptions extends RequestInit {
@@ -13,10 +15,13 @@ async function request<T>(endpoint: string, options: RequestOptions = {}): Promi
     url += `?${searchParams.toString()}`;
   }
 
+  const accessToken = useAuthStore.getState().accessToken;
+
   const response = await fetch(url, {
     ...init,
     headers: {
       'Content-Type': 'application/json',
+      ...(accessToken && { Authorization: `Bearer ${accessToken}` }),
       ...init.headers,
     },
     credentials: 'include',

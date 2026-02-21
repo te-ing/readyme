@@ -20,13 +20,14 @@ export class AuthService {
     return null;
   }
 
-  login(user: { id: string; email: string }) {
+  login(user: { id: string; email: string; name?: string | null }) {
     const payload = { sub: user.id, email: user.email };
     return {
       accessToken: this.jwtService.sign(payload),
       user: {
         id: user.id,
         email: user.email,
+        name: user.name ?? null,
       },
     };
   }
@@ -45,6 +46,6 @@ export class AuthService {
     });
 
     const { password: _, ...result } = user;
-    return result;
+    return this.login(result);
   }
 }
